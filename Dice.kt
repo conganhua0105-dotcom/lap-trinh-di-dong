@@ -1,33 +1,18 @@
-package com.example.lib.bai1
+package com.example.lib.bai2
 
-class Dice {
-    var sides = 6
-
-    fun roll(){
-        val randomNumber = (1..6).random()
-        println(randomNumber)
-    }
-}
-
-class Dice2(val numSides: Int) {
-    fun roll(): Int {
+class Dice(val numSides: Int) {
+    fun roll() : Int {
         val randomNumber = (1..numSides).random()
         return randomNumber
     }
 }
 
-
-fun main(){
-    // Tao 1 doi tuong xuc xac lop Dice
-    val myFirstDice = Dice()
-    val mySecondDice = Dice2(8)
-
-    println("${mySecondDice.numSides}")
-    mySecondDice.roll()
-
-    // truy cap thuoc tinh
-    println("xuc xac cua toi do lan thu ${myFirstDice.sides}")
-    myFirstDice.roll()
-    println("xuc xac cua toi do lan thu ${myFirstDice.sides}")
-    myFirstDice.roll()
+fun main() {
+    // --- PHẦN 1: Lớp và Đối tượng (Class & Object) ---
+    println("=== KET QUA XUC XAC ===")
+    // Tạo một viên xúc xắc 6 mặt
+    val myDice = Dice(6)
+    // Gieo xúc xắc và in kết quả
+    println("Gieo xuc xac 6 mat, ket qua la: ${myDice.roll()}")
+    println("Gieo lan nua: ${myDice.roll()}")
 }
